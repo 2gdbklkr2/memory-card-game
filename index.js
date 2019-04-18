@@ -31,7 +31,7 @@ function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 }
-
+//Check for two cards that match
 function checkForMatch(){
 	if(firstCard.dataset.framework === secondCard.dataset.framework){
 		disableCards();
@@ -46,7 +46,7 @@ function disableCards(){
 
 	resetBoard();
 }
-
+ /// Unflip cards that do not match
 function unflipCards(){
 
 	lockBoard = true;
@@ -59,7 +59,7 @@ function unflipCards(){
 
 	},1500);
 }
-
+//Alllocate random positions for the cards
 (function shuffle(){
 	cards.forEach(card =>{
 		let pos = Math.floor(Math.random() * 12);
